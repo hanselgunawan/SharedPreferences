@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         friends.add("Huzz");
 
         try {
+            //  convert Object into a byte stream by using ObjectSerializer
             sharedPreferences.edit().putString("friends", ObjectSerializer.serialize(friends)).apply();
         } catch (IOException e) {
             e.printStackTrace();
